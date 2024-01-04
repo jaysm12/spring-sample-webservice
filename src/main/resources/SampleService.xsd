@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+  xmlns:orac="http://www.oracle.com"
+  xmlns:v1="http://www.oracle.com/external/services/sampleservice/request/v1.0"
+  xmlns:tns="http://www.oracle.com/external/services/sampleservice/response/v1.0"
+  targetNamespace="http://localhost:5555/external/services/ws/sample-service"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  >
+  <xs:import schemaLocation="AuthHeader.xsd" 
+    namespace="http://www.oracle.com" />
+  <xs:import schemaLocation="RequestSample.xsd" 
+    namespace="http://www.oracle.com/external/services/sampleservice/request/v1.0" />
+  <xs:import schemaLocation="ResponseSample.xsd" 
+    namespace="http://www.oracle.com/external/services/sampleservice/response/v1.0" />
+    <xs:element name="SampleServiceRequest">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="SampleServiceRequestType" type="v1:SampleServiceRequestType"></xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="SampleServiceResponse">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="SampleServiceResponseType" type="tns:SampleServiceResponseType"></xs:element>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>
