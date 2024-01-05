@@ -4,7 +4,6 @@
            xmlns:orac="http://www.oracle.com">
 
   <xs:element name="authenticationheader" type="orac:AuthenticationHeaderType"/>
-  
   <xs:complexType name="AuthenticationHeaderType">
     <xs:sequence>
       <xs:element name="username" type="xs:string"/>
